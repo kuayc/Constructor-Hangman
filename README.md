@@ -1,2 +1,2 @@
 # Constructor-Hangman
-A command-line word guess game.
+A command-line word-guess game.
