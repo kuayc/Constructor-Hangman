@@ -1,10 +1,10 @@
 var Word = require("./word.js");
 var inquirer = require("inquirer")
 
-var wordArray = ["cat", "dog", "beaver", "duck", "sloth", "ladybug", "stork", "dingo", "tapir", "moose", "skink", "goose", "marmoset", "dolphin", ];
+var wordArray = ["cat", "dog", "mouse", "beaver", "duck", "ladybug", "dingo", "goose", "dolphin"];
 var randomWord = "";
 var displayWerd = "";
-var finalWerd;
+var finalWord;
 var leftToGuess;
 var lives = 6
 
@@ -12,13 +12,13 @@ function newGame() {
     randomWord = "";
     var r = parseInt(Math.floor(Math.random() * (wordArray.length)))
     randomWord = wordArray[r]
-    finalWerd = new Word(randomWord)
-    leftToGuess = finalWerd.letterArr.length
+    finalWord = new Word(randomWord)
+    leftToGuess = finalWord.letterArr.length
 }
 
 function gameOver() {
     {
-        console.log("Game over.")
+        console.log("Game over")
         inquirer.prompt([{
             type: "confirm",
             name: "playAgain",
